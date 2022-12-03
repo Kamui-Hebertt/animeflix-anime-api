@@ -1,13 +1,17 @@
-import React  from "react";
+import { useContext, React } from "react";
+
 import Header from '../Components/Header';
 import Releases from "../Components/Releases";
+import AnimeContext from "../context/context";
+import Loading from "../Components/Loading";
 
 function Home() {
- 
+  const { isLoading }  = useContext(AnimeContext);
   return (
     <>
     <Header />
-     <Releases />
+    {isLoading ? <Loading /> : (<Releases />)}
+     
      
        </>
   );
