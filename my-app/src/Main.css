@@ -30,6 +30,10 @@ font-family: 'Times New Roman', Times, serif;}
 .content img { 
   width:  20vw;
 }
+
+ .content img:hover {
+  opacity: 0.3;
+ }
 .released {
   border: 1px solid white;
   display: flex;
