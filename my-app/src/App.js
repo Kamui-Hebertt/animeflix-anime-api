@@ -12,14 +12,17 @@ function App() {
   const [ releaseState, setReleaseState ] = useState([]);
   const [ popularState, setPopularState ] = useState([]);
   const [ moviesState, setMoviesState ] = useState([]);
+  const [searchComponent, setSearchComponent] = useState([]);
+  const [ search, setSearch ] = useState('');
   const [ isLoading, setLoading ] = useState(false);
+  const [ TheSearch, setTheSearch] = useState(false);
 
   const requestApi  = async () => {
     const url = 'https://gogoanime.consumet.org/recent-release';
          setLoading(true);
         const request  = await fetch (url);
        const  reJson = await request.json();
-      // console.log(reJson)
+    
       setTimeout(() => {
         setReleaseState(reJson);
         
@@ -68,19 +71,37 @@ function App() {
       }, 3000);
       
   }
+
+
+  const requestSearching = async () =>{
+  const request = await fetch(`https://gogoanime.consumet.org/search?keyw=${search}`);
+  const jsonResponse = await request.json();
+  search === '' ? setTheSearch(false) : setTheSearch(true);
+  setSearchComponent(jsonResponse);
+
+
+  }
+
   
 
   useEffect(()=>{
+    
   requestApi();
   requestApiPopular();
   requestApiMovies();
-  }, [] )
+  requestSearching();
+  search === '' ? setTheSearch(false) : setTheSearch(true);
+  }, [search, TheSearch] )
 
   const contextObj = {
     releaseState, setReleaseState,
     popularState, setPopularState,
     moviesState, setMoviesState,
     isLoading, setLoading,
+    search, setSearch,
+    searchComponent, setSearchComponent,
+    TheSearch, setTheSearch,
+
 }
     
 

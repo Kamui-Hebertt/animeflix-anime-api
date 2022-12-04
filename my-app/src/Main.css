@@ -33,6 +33,7 @@ font-family: 'Times New Roman', Times, serif;}
 
  .content img:hover {
   opacity: 0.3;
+  
  }
 .released {
   border: 1px solid white;
@@ -50,6 +51,29 @@ font-family: 'Times New Roman', Times, serif;}
   color: var(--kindgray);
 }
 
+
+.searchBarContent{
+
+
+
+
+}
+.searchBar{
+ 
+  border-radius: 6px;
+  
+
+ 
+}
+
+.searchBarContent p {
+ 
+  
+ 
+  color: var(--kindgray);
+  font-size: 20px;
+  
+}
 
 .linkText:hover{
   text-decoration: none;
