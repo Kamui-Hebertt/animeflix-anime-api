@@ -7,7 +7,7 @@ function Releases() {
     <div>
 {TheSearch ? <Search /> : ( <div className="main">
 
-<h2 className="releasedh2">Release Animes</h2>
+<h2 className="releasedh2">Releases Animes</h2>
 <div className="released">
 
   {releaseState.map((element) => (
