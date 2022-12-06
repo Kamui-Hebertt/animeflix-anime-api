@@ -1,4 +1,4 @@
-import {React, useContext } from "react";
+import {React, useContext, use } from "react";
 import AnimeContext from "../context/context";
 import Search from "./Search";
 

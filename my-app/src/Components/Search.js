@@ -11,7 +11,7 @@ function  Search () {
 
 <><div className="main">
 
-          <h2 className="releasedh2">Movies</h2>
+          <h2 className="releasedh2">Search results:</h2>
           <div className="released">
 
             {searchComponent.map((element) => (

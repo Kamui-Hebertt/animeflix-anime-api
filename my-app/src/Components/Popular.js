@@ -10,7 +10,7 @@ function  Popular () {
    {TheSearch ? <Search /> : (
     <div className="main">
 
-    <h2 className="releasedh2">Popular Animes</h2>
+    <h2 className="releasedh2"> Popular </h2>
     <div className="released">
 
       {popularState.map((element) => (
