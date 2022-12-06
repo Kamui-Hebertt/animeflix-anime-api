@@ -1,15 +1,14 @@
-import {React, useContext } from "react";
+import {React, useContext, use } from "react";
 import AnimeContext from "../context/context";
-import Header from "./Header";
-import Loading from "./Loading";
+import Search from "./Search";
 
 function  Movies () {
-  const { moviesState, isLoading }  = useContext(AnimeContext);
+  const { moviesState, TheSearch }  = useContext(AnimeContext);
  console.log(moviesState)
   return (
     <>
-    <Header />
-    {isLoading ? <Loading /> : (
+
+    {TheSearch ? <Search /> : (
       <><div className="main">
 
           <h2 className="releasedh2">Movies</h2>

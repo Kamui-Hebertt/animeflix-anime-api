@@ -26,8 +26,8 @@ function Header (){
     </h2>
     <nav className="nav1">
       <Link to="/" className="nav2" onClick={ reset } >Home</Link>
-      <Link to="/popular" className="nav2" >Popular animes</Link>
-      <Link to="/movies" className="nav2" >Movies</Link>
+      <Link to="/popular" className="nav2" onClick={ reset } >Popular animes</Link>
+      <Link to="/movies" className="nav2" onClick={ reset } >Movies</Link>
       
     </nav>
     <div className="searchBarContent">

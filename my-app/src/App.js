@@ -1,11 +1,11 @@
 
 import { Switch, Route } from "react-router-dom"
 import Home from './pages/Home';
-import Popular from "./Components/Popular";
-import Movies from "./Components/Movies";
 import {React, useEffect, useState,} from 'react';
 import AnimeContext from '../src/context/context';
 import './Main.css';
+import MoviesPage from "./pages/MoviesPage";
+import PopularPage from "./pages/PopularPage";
 
 
 function App() {
@@ -112,8 +112,8 @@ function App() {
 
       <Switch>
       <Route exact path="/" component={ Home } />
-      <Route exact path="/popular" component={ Popular } />
-      <Route  exact path="/movies" component={ Movies } />
+      <Route exact path="/popular" component={ PopularPage } />
+      <Route  exact path="/movies" component={ MoviesPage } />
       
     </Switch>
     
