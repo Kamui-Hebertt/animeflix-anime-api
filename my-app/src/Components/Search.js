@@ -1,12 +1,11 @@
 import { React, useContext } from "react";
- //import Header from "./Header";
 import AnimeContext from "../context/context";
 
 
 
 function  Search () {
   const { searchComponent }  = useContext(AnimeContext);
- console.log(searchComponent)
+  console.log(searchComponent)
   return (
     <>
 
@@ -23,7 +22,7 @@ function  Search () {
                   <img className="only" src={element.animeImg} alt={element.animeTitle} />
                 </a>
                 <a target="_blank" href={element.animeUrl} className="linkText">
-                  <p>Release Date: {element.releasedDate}</p></a>
+                  <p>Release Date: {element.status}</p></a>
               </div>
             ))}
           </div>

@@ -1,15 +1,13 @@
 import {React, useContext } from "react";
 import AnimeContext from "../context/context";
-import Header from "./Header";
-import Loading from "./Loading";
+import Search from "./Search";
+
 function  Popular () {
-  const { popularState, isLoading }  = useContext(AnimeContext);
+  const { popularState,  TheSearch }  = useContext(AnimeContext);
 // console.log(popularState)
   return (
    <>
-   
-   <Header />
-   {isLoading ? <Loading /> : (
+   {TheSearch ? <Search /> : (
     <div className="main">
 
     <h2 className="releasedh2">Popular Animes</h2>
