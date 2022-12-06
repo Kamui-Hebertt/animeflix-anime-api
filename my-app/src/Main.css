@@ -122,6 +122,7 @@ nav :hover {
 .headerContainer {
   justify-content: space-evenly;
   display: flex;
+  border-radius: 10px;
   align-items: center;
   border: 1px solid white;
   
